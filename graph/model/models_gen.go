@@ -5,9 +5,22 @@ package model
 type Mutation struct {
 }
 
+type NewPerson struct {
+	Name   string `json:"name"`
+	Age    int    `json:"age"`
+	IsMale *bool  `json:"isMale,omitempty"`
+}
+
 type NewTodo struct {
 	Text   string `json:"text"`
 	UserID string `json:"userId"`
+}
+
+type Person struct {
+	ID     string `json:"id"`
+	Name   string `json:"name"`
+	Age    int    `json:"age"`
+	IsMale bool   `json:"isMale"`
 }
 
 type Query struct {
